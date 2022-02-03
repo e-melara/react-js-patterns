@@ -1,11 +1,12 @@
-import Navigation from "./routes/Navigation";
+import Navigation from './routes/Navigation'
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Navigation />
+      {'pagina'}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

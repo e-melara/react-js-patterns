@@ -1,25 +1,25 @@
-import { useReducer } from "react";
-import { CounterState } from "./interfaces/interfaces";
-import { counterReducer } from "./state/CounterReducer";
+import { useReducer } from 'react'
+import { CounterState } from './interfaces/interfaces'
+import { counterReducer } from './state/CounterReducer'
 
-import * as actions from "./actions/actions";
+import * as actions from './actions/actions'
 
 const INITIAL_STATE: CounterState = {
   counter: 0,
   previous: 0,
   changes: 0,
-};
+}
 
 export const CounterReducer = () => {
-  const [state, dispatch] = useReducer(counterReducer, INITIAL_STATE);
+  const [state, dispatch] = useReducer(counterReducer, INITIAL_STATE)
 
   const handlerReset = () => {
-    dispatch(actions.doReset());
-  };
+    dispatch(actions.doReset())
+  }
 
   const incrementBy = (value: number = 1) => {
-    dispatch(actions.doIncrementBy(value));
-  };
+    dispatch(actions.doIncrementBy(value))
+  }
 
   return (
     <>
@@ -32,5 +32,5 @@ export const CounterReducer = () => {
       <button onClick={() => incrementBy(5)}>+5</button>
       <button onClick={() => incrementBy(10)}>+10</button>
     </>
-  );
-};
+  )
+}
