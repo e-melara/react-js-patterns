@@ -4,9 +4,11 @@ import ProductCard, {
   ProductTitle,
 } from '../components'
 
+import '../styles/custom-style.css'
+
 const product = {
   id: '1',
-  title: 'Hola Mundo',
+  title: '',
 }
 
 export const ShoppingPage = () => {
@@ -21,16 +23,16 @@ export const ShoppingPage = () => {
           flexWrap: 'wrap',
         }}
       >
-        <ProductCard product={product}>
-          <ProductCard.Image />
-          <ProductCard.Title />
-          <ProductButtons />
+        <ProductCard product={product} className='bg-dark'>
+          <ProductImage className="custom-image" />
+          <ProductTitle className="text-white" />
+          <ProductButtons className="custom-buttons" />
         </ProductCard>
 
-        <ProductCard product={product}>
-          <ProductImage />
-          <ProductTitle />
-          <ProductButtons />
+        <ProductCard product={product} className='bg-dark'>
+          <ProductCard.Image className='custom-image' />
+          <ProductCard.Title className='text-white' />
+          <ProductCard.Buttons className='custom-buttons' />
         </ProductCard>
       </div>
     </div>

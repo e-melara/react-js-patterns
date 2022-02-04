@@ -1,9 +1,15 @@
 import { useProduct } from '../hooks/useProduct'
 
 import styles from '../styles/products.module.css'
-import { Props, Provider } from '../interfaces/interfaces'
+import { Provider, Product } from '../interfaces/interfaces'
 
-export const ProductCard = ({ product, children }: Props) => {
+export interface Props {
+  product: Product
+  children?: React.ReactElement | React.ReactElement[]
+  className?: string
+}
+
+export const ProductCard = ({ product, children, className }: Props) => {
   const { counter, incrementBy } = useProduct()
 
   return (
@@ -14,7 +20,7 @@ export const ProductCard = ({ product, children }: Props) => {
         product,
       }}
     >
-      <div className={styles.productCard}>{children}</div>
+      <div className={`${styles.productCard} ${className}`}>{children}</div>
     </Provider>
   )
 }
