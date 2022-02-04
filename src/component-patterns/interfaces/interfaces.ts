@@ -24,6 +24,15 @@ export interface ProductCardHOCProps {
   Buttons: ({ className }: ButtonsProps) => JSX.Element
 }
 
+export interface onChangeArgs {
+  product: Product
+  count: number
+}
+
+export interface ProductInCart extends Product {
+  cantidad: number
+}
+
 // product context
 export const ProductContext = createContext({} as ProductContextProps)
 export const { Provider } = ProductContext

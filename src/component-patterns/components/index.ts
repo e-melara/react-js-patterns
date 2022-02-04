@@ -13,6 +13,12 @@ export { ProductImage } from './ProductImage'
 export { ProductTitle } from './ProductTitle'
 export { ProductButtons } from './ProductButtons'
 
+export type {
+  Product,
+  onChangeArgs,
+  ProductInCart,
+} from '../interfaces/interfaces'
+
 export const ProductCard: ProductCardHOCProps = Object.assign(ProductCardHOC, {
   Title: ProductTitle,
   Image: ProductImage,
