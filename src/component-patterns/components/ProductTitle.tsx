@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-import styles from '../styles/products.module.css'
+import styles from '../styles/styles.module.css'
 import { ProductContext } from 'component-patterns/interfaces/interfaces'
 
 export interface Props {

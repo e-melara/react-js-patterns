@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 
 import noImage from '../assets/no-image.jpg'
-import styles from '../styles/products.module.css'
+import styles from '../styles/styles.module.css'
 
 import { ProductContext } from 'component-patterns/interfaces/interfaces'
 
